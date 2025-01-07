@@ -12,4 +12,13 @@
 
 // Write your solution here
 
+function factorialRecursive(number) {
+    if (number < 0) return NaN;
+    if (number === 0) return 1;
+    if (number === 1) return 1;
+    else return number * factorialRecursive(number - 1);
+}
+
+factorial = (number) => factorialRecursive(number);
+
 module.exports = factorial;

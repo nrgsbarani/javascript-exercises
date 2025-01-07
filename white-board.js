@@ -32,6 +32,7 @@ celsiusToFahrenheit = (degree) => (degree * (9 / 5)) + 32;
 console.log(celsiusToFahrenheit(100));*/
 
 
+/*
 function isPrime(number ) {
     if (number < 2 ) { return false }
     let max = Math.floor(number ** 0.5) + 1 ;
@@ -41,4 +42,14 @@ function isPrime(number ) {
     return true;
 }
 
-console.log(isPrime(51));
+console.log(isPrime(51));*/
+
+
+function factorialRecursive(number) {
+    if (number < 0) return NaN;
+    if (number === 0) return 1;
+    if (number === 1) return 1;
+    else return number * factorialRecursive(number - 1);
+}
+
+console.log(factorialRecursive(5));
