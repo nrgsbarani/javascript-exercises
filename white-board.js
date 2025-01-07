@@ -25,7 +25,20 @@ isEvenOrOdd = (number) => number%2 === 0 ? "Even"  : "Odd"
 
 console.log(isEvenOrOdd(5))
 */
+/*
 
 celsiusToFahrenheit = (degree) => (degree * (9 / 5)) + 32;
 
-console.log(celsiusToFahrenheit(100));
+console.log(celsiusToFahrenheit(100));*/
+
+
+function isPrime(number ) {
+    if (number < 2 ) { return false }
+    let max = Math.floor(number ** 0.5) + 1 ;
+    for (let i = 2; i <= max; i++) {
+        if (number % i === 0  ) {return false;}
+    }
+    return true;
+}
+
+console.log(isPrime(51));
