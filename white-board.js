@@ -45,6 +45,7 @@ function isPrime(number ) {
 console.log(isPrime(51));*/
 
 
+/*
 function factorialRecursive(number) {
     if (number < 0) return NaN;
     if (number === 0) return 1;
@@ -52,4 +53,23 @@ function factorialRecursive(number) {
     else return number * factorialRecursive(number - 1);
 }
 
-console.log(factorialRecursive(5));
+console.log(factorialRecursive(5));*/
+
+/*function charCount(string , char) {
+    //let arr = ;
+    //return string.split('').reduce((accumulator, currentValue) => (currentValue === char) ? accumulator ++ : accumulator , 0);
+    let arr = string.split('');
+    let count = 0;
+    for (item of arr) {
+        if (item === char) {
+            count++;
+        }
+    }
+    return count;
+}*/
+
+
+/*
+console.log(charCount("hello World" , "l"));
+*/
+

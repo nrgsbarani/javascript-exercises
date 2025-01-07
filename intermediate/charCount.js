@@ -12,4 +12,15 @@
 
 // Write your solution here
 
+function charCount(string , char) {
+    let arr = string.split('');
+    let count = 0;
+    for (item of arr) {
+        if (item === char) {
+            count++;
+        }
+    }
+    return count;
+}
+
 module.exports = charCount;
