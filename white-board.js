@@ -19,7 +19,13 @@ function reverseStr(inputString) {
 console.log(reverseString1("hello World"));
 console.log(reverseStr("hello World"));
 */
+/*
 
 isEvenOrOdd = (number) => number%2 === 0 ? "Even"  : "Odd"
 
 console.log(isEvenOrOdd(5))
+*/
+
+celsiusToFahrenheit = (degree) => (degree * (9 / 5)) + 32;
+
+console.log(celsiusToFahrenheit(100));

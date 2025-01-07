@@ -11,5 +11,6 @@
  */
 
 // Write your solution here
+celsiusToFahrenheit = (degree) => (degree * (9 / 5)) + 32;
 
 module.exports = celsiusToFahrenheit;
