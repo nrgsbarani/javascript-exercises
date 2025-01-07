@@ -11,5 +11,6 @@
  */
 
 // Write your solution here
+isEvenOrOdd = (number) => number%2 === 0 ? "Even" : "Odd"
 
 module.exports = isEvenOrOdd;

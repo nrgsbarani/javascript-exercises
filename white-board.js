@@ -1,3 +1,4 @@
+/*
 function reverseString(str) {
     return str.split('').reverse().join('');
 }
@@ -17,3 +18,8 @@ function reverseStr(inputString) {
 
 console.log(reverseString1("hello World"));
 console.log(reverseStr("hello World"));
+*/
+
+isEvenOrOdd = (number) => number%2 === 0 ? "Even"  : "Odd"
+
+console.log(isEvenOrOdd(5))
