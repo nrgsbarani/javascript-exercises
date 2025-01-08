@@ -161,3 +161,24 @@ function palindromeRecursive(array , start , end) {
 }
 
 console.log(isPalindrome(12321));*/
+async function getClock() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+    return hour + ":" + minute + ":" + second;
+}
+
+function digitalClock(){
+    setInterval(() => {
+        let date = new Date();
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+        let second = date.getSeconds();
+        console.clear()
+        console.log(hour + ":" + minute + ":" + second);
+        //process.stdout.write(hour + ":" + minute + ":" + second);
+    }, 100);
+}
+
+digitalClock()
