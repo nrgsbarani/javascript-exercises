@@ -145,6 +145,7 @@ removeUser("Amir")
 console.log( showUsers() );
 */
 
+/*
 isPalindrome = (number) => number < 0 ? false : prepare2palindrome( number );
 
 function prepare2palindrome(number) {
@@ -159,4 +160,4 @@ function palindromeRecursive(array , start , end) {
     else return false;
 }
 
-console.log(isPalindrome(12321));
+console.log(isPalindrome(12321));*/
