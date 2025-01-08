@@ -14,4 +14,11 @@
  * showUsers() should return [].
  */
 
+let userList = new Set([]);
+
+addUser = (user) => userList.has(user) ? false : userList.add(user) ;
+showUsers = () => Array.from(userList);
+removeUser = (user) => userList.delete(user);
+
+
 module.exports = { addUser, removeUser, showUsers };

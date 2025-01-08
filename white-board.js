@@ -121,9 +121,24 @@ merge([1,3,5] , [1,2,6])
 console.log(mergeSort(array2));
 */
 
+/*
 sumOfDigits(12335)
 
 function sumOfDigits(n) {
     let array = new String(n + "").split("").map(Number);
     console.log(array);
-}
+}*/
+
+
+let userList = new Set([]);
+
+addUser = (user) => userList.has(user) ? false : userList.add(user) ;
+showUsers = () => Array.from(userList);
+removeUser = (user) => userList.delete(user);
+
+addUser("Amir")
+addUser("hesam")
+removeUser("forghan")
+removeUser("Amir")
+
+console.log( showUsers() );
