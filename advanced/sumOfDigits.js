@@ -9,5 +9,6 @@
  * sumOfDigits(123) should return 6 (1 + 2 + 3).
  * sumOfDigits(987) should return 24 (9 + 8 + 7).
  */
+sumOfDigits = (number) => (new String(number)).split('').map(Number).reduce((a, b) => a + b , 0);
 
 module.exports = sumOfDigits;

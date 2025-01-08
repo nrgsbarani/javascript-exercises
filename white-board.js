@@ -72,6 +72,7 @@ console.log(factorialRecursive(5));*/
 /*
 console.log(charCount("hello World" , "l"));
 */
+/*
 
 // array = [3, 1, 4, 1, 5, 9]
 let array = [3, 1, 4, 1, 5]
@@ -118,3 +119,11 @@ function merge(left , right ) {
 
 merge([1,3,5] , [1,2,6])
 console.log(mergeSort(array2));
+*/
+
+sumOfDigits(12335)
+
+function sumOfDigits(n) {
+    let array = new String(n + "").split("").map(Number);
+    console.log(array);
+}
