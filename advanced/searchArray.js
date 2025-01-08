@@ -11,4 +11,14 @@
  * searchArray([1, 2, 3, 4], 5) should return false.
  */
 
+
+// linear search
+
+function searchArray(array , key){
+    for (let item of array ){
+        if (key === item) return true
+    }
+    return false;
+}
+
 module.exports = searchArray;
