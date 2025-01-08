@@ -73,3 +73,48 @@ console.log(factorialRecursive(5));*/
 console.log(charCount("hello World" , "l"));
 */
 
+// array = [3, 1, 4, 1, 5, 9]
+let array = [3, 1, 4, 1, 5]
+
+array2 = [10, -1, 2, 0, 3]
+sortArray = (array) => array.sort();
+
+function mergeSort(array) {
+    //console.log(array)
+    if (array.length === 0 || array.length === 1) return array;
+    else return merge(mergeSort(array.slice(0 ,array.length/2 )), mergeSort(array.slice(array.length/2,)));
+}
+
+function merge(left , right ) {
+
+    let output = new Array(left.length + right.length);
+    //let output_index = 0;
+    let left_index = 0;
+    let right_index = 0;
+    for (let i = 0; i < output.length; i++) {
+        if (left_index === left.length ) {
+            output[i] = right[right_index];
+            right_index ++
+        }else if (right_index === right.length ) {
+            output[i] = left[left_index];
+            left_index ++
+        }else {
+            if( left[left_index] < right[right_index] ) {
+                output[i] = left[left_index];
+                left_index ++
+            }else {
+                output[i] = right[right_index];
+                right_index ++
+            }
+        }
+    }
+    //console.log(output);
+    return output;
+}
+//(5/2)
+//console.log(array.slice(0,2));
+//console.log(array.slice(2,));
+//mergeSort(array)
+
+merge([1,3,5] , [1,2,6])
+console.log(mergeSort(array2));
