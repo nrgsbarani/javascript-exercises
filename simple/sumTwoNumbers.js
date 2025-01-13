@@ -15,10 +15,8 @@ function sum(a, b) {
   return a + b;
 }
 
+console.log(2+7)
 module.exports = sum;
 
-function sum(a, b) {
-  return a + b;
-}
 
-console.log(1+2);
+
