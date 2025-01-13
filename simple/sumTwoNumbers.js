@@ -16,3 +16,9 @@ function sum(a, b) {
 }
 
 module.exports = sum;
+
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(1+2);
