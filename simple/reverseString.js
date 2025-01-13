@@ -11,5 +11,17 @@
  */
 
 // Write your solution here
+function reverseString(word) {
+
+    let wordarray =word.split("");
+    let reversedarray =wordarray.reverse();
+    let reversedword =reversedarray.join("");
+    return reversedword;
+
+}
+
+let result = reverseString("سلام23");
+console.log(result);
+
 
 module.exports = reverseString;
