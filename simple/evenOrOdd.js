@@ -24,5 +24,7 @@ function isEvenOrOdd(number) {
 
 console.log(isEvenOrOdd(9));
 console.log(isEvenOrOdd(568));
+console.log(isEvenOrOdd(-24));
+
 
 module.exports = isEvenOrOdd;
