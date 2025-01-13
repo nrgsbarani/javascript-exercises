@@ -11,5 +11,18 @@
  */
 
 // Write your solution here
+function isEvenOrOdd(number) {
+
+    if (number % 2 === 0) {
+        return "even";
+
+    }
+        if (number % 2 !== 0) {
+            return "odd";
+        }
+}
+
+console.log(isEvenOrOdd(9));
+console.log(isEvenOrOdd(568));
 
 module.exports = isEvenOrOdd;
