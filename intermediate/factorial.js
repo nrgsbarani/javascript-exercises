@@ -11,5 +11,15 @@
  */
 
 // Write your solution here
+function factorial(num) {
+    let a = 1;
+    for (i=num; i >= 1 ; i--) {
+        a = a * i;
+    }
+    return a;
+}
+
+console.log(factorial(5));
+console.log(factorial(45));
 
 module.exports = factorial;
