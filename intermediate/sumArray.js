@@ -11,5 +11,19 @@
  */
 
 // Write your solution here
+function sumArray(arrey) {
+    let sum = 0;
+    // اول یه متغیر خالی میسازم که بخوام عددها رو بندازم داخلش
+    for (let i=0 ; i<arrey.length ; i++) {
+        // یه حلقه درست میکنم که اولین عنصر رو بگیره و بندازه توی متغیر sum  و تا زمانی که تمام عناصر رو نندازه تموم نشه
+        sum = sum +arrey[i];
+        // هر عنصری که میاد بیاد با مقدار قبلی که توی sum بوده جمع بشه
+    }
+    return sum;
+}
+
+console.log(sumArray([1,2,3]));
+console.log(sumArray([45,50,46]));
+
 
 module.exports = sumArray;
