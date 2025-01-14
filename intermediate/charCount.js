@@ -11,5 +11,17 @@
  */
 
 // Write your solution here
+function charCount(w,l) {
+    let a = 0;
+    for (i=0; i <= w.length; i++) {
+        if (w[i] == l) {
+            a =a + 1;
+        }
+    }
+    return a;
+}
+console.log(charCount("hello" , "l"));
+
+
 
 module.exports = charCount;
