@@ -12,4 +12,15 @@
 
 // Write your solution here
 
+function reverseString(x){
+
+    let reverser = Array.from(x)
+
+    let reversed = reverser.reverse()
+
+    let string = reversed.join("")
+
+    return string
+}
+
 module.exports = reverseString;
