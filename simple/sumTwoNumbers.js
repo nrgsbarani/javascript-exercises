@@ -11,9 +11,15 @@
  */
 
 // Write your solution here
+<<<<<<< HEAD
 //const sum = (a,b) => a + b;
 
 sum = (a, b) => a + b;
 //const sum2 = (a, b) => a + b;
+=======
+function sum(a, b) {
+  return a + b;
+}
+>>>>>>> upstream/main
 
 module.exports = sum;
