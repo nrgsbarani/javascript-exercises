@@ -194,6 +194,7 @@ function digitalClock(){
 
 digitalClock()*/
 
+/*
 function findDuplicates(input) {
     let output = [];
     let lastelement = NaN;
@@ -217,4 +218,58 @@ function findDuplicates(input) {
     return output;
 }
 
-console.log(findDuplicates([1, 2, 2, 3, 4, 4]));
+console.log(findDuplicates([1, 2, 2, 3, 4, 4]));*/
+
+/*
+[1,2,3,4,5]
+k = 1 ==> [1] , [2] , [3] , [4] , [5]
+k = 2 ==> [1,2] , [1,3] , [1,4] , [1,5] , [2,3] , [2,4] , [2,5] , [3,4] , [3,5] , [4,5]
+k = 3 ==> [1,2,3] , [1,2,4] , [1,2,5] , [2,3,4] , [2,3,5] , [3,4,5]
+k = 4 ==> [1,2,3,4] , [1,3,4,5] , [1,2,4,5] , [1,2,3,5] , [2,3,4,5]
+k = 5 ==> [1,2,3,4,5]
+
+ */
+
+function generateCombinatonFromN(array , num) {
+    let outputall = [];
+    if ( num > array.length || array.length === 0  || num <= 0 || num == NaN) {
+        return [];
+    }
+    if (num === array.length) {
+        return array;
+    }
+    for (let i = 0; i < array.length; i++) {
+        let ini = []
+
+        ini.push(array[i]);
+        for (let j = i+1 ; j < num; j++) {
+
+        }
+
+        outputall.push(ini)
+    }
+
+    console.log(outputall);
+
+}
+
+function addotherElements(){
+
+}
+
+
+function generateCombinations(input){
+    let output = []
+    for (let i = 1; i < input.length; i++) {
+        output.push( generateCombinationsToN(input , input.length) )
+    }
+
+    return output;
+}
+
+function generateCombinationsToN(input , num){
+    return [];
+}
+
+
+console.log(generateCombinations([1,2,3]));
