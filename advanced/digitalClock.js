@@ -18,20 +18,39 @@
  * (e.g., `<div id="clock"></div>`) to display the clock.
  */
 
-<<<<<<< HEAD
 // Write your solution here
+
+//const jsdom = require("jsdom");
+
+
+//document.documentElement.innerHtml
+
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
+
+
+
+
+
+
+
+
 function digitalClock(){
+
+
     setInterval(() => {
         let date = new Date();
         let hour = date.getHours();
         let minute = date.getMinutes();
         let second = date.getSeconds();
-        console.clear()
+        //console.clear()
         console.log(hour + ":" + minute + ":" + second);
+        document.getElementById('clock').innerHTML = `${hour}:${minute}:${second}`;
+        //clockElement.textContent = `${hour}:${minute}:${second}`;
         //process.stdout.write(hour + ":" + minute + ":" + second);
-    }, 100);
+    }, 200);
 }
-=======
->>>>>>> upstream/main
+
 
 module.exports = digitalClock;

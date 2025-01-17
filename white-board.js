@@ -161,15 +161,25 @@ function palindromeRecursive(array , start , end) {
 }
 
 console.log(isPalindrome(12321));*/
-async function getClock() {
-    let date = new Date();
-    let hour = date.getHours();
-    let minute = date.getMinutes();
-    let second = date.getSeconds();
-    return hour + ":" + minute + ":" + second;
-}
+// async function getClock() {
+//     let date = new Date();
+//     let hour = date.getHours();
+//     let minute = date.getMinutes();
+//     let second = date.getSeconds();
+//     return hour + ":" + minute + ":" + second;
+// }
+/*
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
+const dom = new JSDOM("<!DOCTYPE html><head></head><body><div id=\"clock\"></div></body></html>");
+
 
 function digitalClock(){
+
+    //document.body.innerHTML = '<div id="clock"></div>';
+    const clockElement = dom.window.document.getElementById("clock");
+
     setInterval(() => {
         let date = new Date();
         let hour = date.getHours();
@@ -177,8 +187,34 @@ function digitalClock(){
         let second = date.getSeconds();
         console.clear()
         console.log(hour + ":" + minute + ":" + second);
+        clockElement.textContent = `${hour}:${minute}:${second}`;
         //process.stdout.write(hour + ":" + minute + ":" + second);
-    }, 100);
+    }, 500);
 }
 
-digitalClock()
+digitalClock()*/
+
+function findDuplicates(input) {
+    let output = [];
+    let lastelement = NaN;
+    let exists = false;
+    //console.log(input)
+    for(let item of input) {
+        //console.log(item);
+        if (item === lastelement) {
+            if (exists === true) {
+                // do nothing
+            } else {
+                output.push(item);
+                exists = true;
+            }
+        } else {
+            exists = false;
+        }
+        lastelement = item
+    }
+
+    return output;
+}
+
+console.log(findDuplicates([1, 2, 2, 3, 4, 4]));

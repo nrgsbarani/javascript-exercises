@@ -12,4 +12,27 @@
 
 // Write your solution here
 
+function findDuplicates(input) {
+    let output = [];
+    let lastestelement = NaN;
+    let exists = false;
+    //console.log(input)
+    for(let item of input) {
+        //console.log(item);
+        if (item === lastestelement) {
+            if (exists === true) {
+                // do nothing
+            } else {
+                output.push(item);
+                exists = true;
+            }
+        } else {
+            exists = false;
+        }
+        lastestelement = item
+    }
+
+    return output;
+}
+
 module.exports = findDuplicates;

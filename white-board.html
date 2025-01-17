@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div id="clock"></div>
+  <script>
+    function digitalClock(){
+
+      const clockElement = document.getElementById("clock");
+
+      setInterval(() => {
+        let date = new Date();
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+        let second = date.getSeconds();
+        console.clear()
+        console.log(hour + ":" + minute + ":" + second);
+        clockElement.textContent = `${hour}:${minute}:${second}`;
+        //process.stdout.write(hour + ":" + minute + ":" + second);
+      }, 500);
+    }
+
+    //digitalClock();
+
+  </script>
+</body>
+</html>
