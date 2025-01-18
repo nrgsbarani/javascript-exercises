@@ -12,4 +12,8 @@
 
 // Write your solution here
 
+function celsiusToFahrenheit(x){
+    return 1.8 * x + 32
+}
+
 module.exports = celsiusToFahrenheit;
