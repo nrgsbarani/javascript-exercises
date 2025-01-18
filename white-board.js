@@ -229,51 +229,59 @@ k = 4 ==> [1,2,3,4] , [1,3,4,5] , [1,2,4,5] , [1,2,3,5] , [2,3,4,5]
 k = 5 ==> [1,2,3,4,5]
 
  */
-//
-// function generateCombinatonFromN(array , num) {
-//     let outputall = [];
-//     if ( num > array.length || array.length === 0  || num <= 0 || num == NaN) {
-//         return [];
-//     }
-//     if (num === array.length) {
-//         return array;
-//     }
-//     for (let i = 0; i < array.length; i++) {
-//         let ini = []
-//
-//         ini.push(array[i]);
-//         for (let j = i+1 ; j < num; j++) {
-//
-//         }
-//
-//         outputall.push(ini)
-//     }
-//
-//     console.log(outputall);
-//
-// }
-//
-// function addotherElements(){
-//
-// }
-//
-//
-// function generateCombinations(input){
-//     let output = []
-//     for (let i = 1; i < input.length; i++) {
-//         output.push( generateCombinationsToN(input , input.length) )
-//     }
-//
-//     return output;
-// }
-//
-// function generateCombinationsToN(input , num){
-//     return [];
-// }
-//
-//
-// console.log(generateCombinations([1,2,3]));
+/*
 
+
+
+
+function generateCombinatonFromN(array , num) {
+    let outputall = [];
+    if ( num > array.length || array.length === 0  || num <= 0 || num == NaN) {
+        return [];
+    }
+    if (num === array.length) {
+        return array;
+    }
+    for (let i = 0; i < array.length; i++) {
+        let ini = []
+
+        ini.push(array[i]);
+        for (let j = i+1 ; j < num; j++) {
+
+        }
+
+        outputall.push(ini)
+    }
+
+    console.log(outputall);
+
+}
+
+function addotherElements(){
+
+}
+
+
+function generateCombinations(input){
+    let output = []
+    for (let i = 1; i < input.length; i++) {
+        output.push( generateCombinationsToN(input , input.length) )
+    }
+
+    return output;
+}
+
+function generateCombinationsToN(input , num){
+    return [];
+}
+
+
+console.log(generateCombinations([1,2,3]));
+*/
+
+
+
+/*
 
 function numberToWords(input){
     const Numbers = new Map([
@@ -344,3 +352,130 @@ function numberToWords(input){
 }
 
 console.log(numberToWords(20))
+*/
+
+function generateCombinations(input) {
+    let output = [];
+    recursion(output , [] , input);
+}
+
+
+
+
+function recursion(output , current , remind) {
+    //console.log(current , remind);
+    if (remind.length === 0) {
+        //console.log(current)
+        if (current.length > 0) {
+            output.push(current);
+        }
+        //return;
+    }else {
+        recursion(output , current.concat(remind.slice(0,1) ) , remind.slice(1,));
+        recursion(output , current, remind.slice(1,));
+    }
+}
+
+function orderArraysInArray(arrays , count) {
+
+
+    let output = new Array();
+    for (let indexI = 1; indexI <= count; indexI++) {
+        let temp = [];
+        //console.log(indexI)
+        for (let indexj = 0; indexj < arrays.length; indexj++) {
+            //console.log(arrays[indexj]);
+
+            if ( arrays[indexj].length === indexI ) {
+                //console.log(arrays[indexj]);
+                temp.push(arrays[indexj]);
+                //return;
+            }
+
+
+        }
+        //console.log(arrays);
+        //console.log(temp);
+        let sorted = arrayMergeSort(temp);
+        //console.log(sorted , output);
+
+        output = [...output , ...sorted];
+
+    }
+
+    //console.log(output);
+    return output;
+
+
+
+
+}
+
+function sumArrays(array) {
+    return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+
+function arrayMergeSort(array) {
+    // console.log(array);
+    if (array.length === 0 || array.length === 1) return array;
+    else return arrayMerge(arrayMergeSort(array.slice(0 ,array.length/2 )), arrayMergeSort(array.slice(array.length/2,)));
+}
+
+function arrayMerge(left , right) {
+    let output = new Array(left.length + right.length);
+    let left_index = 0;
+    let right_index = 0;
+    for (let i = 0; i < output.length; i++) {
+        if (left_index === left.length ) {
+            output[i] = right[right_index];
+            right_index ++
+        }else if (right_index === right.length) {
+            output[i] = left[left_index];
+            left_index ++
+        }else {
+            if (sumArrays(left[left_index]) < sumArrays(right[right_index])) {
+                output[i] = left[left_index];
+                left_index ++
+            }else {
+                output[i] = right[right_index];
+                right_index ++
+            }
+        }
+    }
+
+    return output;
+}
+
+function copyArrays(input) {
+    let output = new Array(input.length );
+    for (let item of input) {
+        output.push(item);
+    }
+
+    return output;
+}
+
+
+
+let array = [1, 2, 3]
+let size = array.length;
+/*console.log(array.slice(0,1))
+console.log(array.slice(1,))
+console.log(array)
+console.log(array.slice(5,))*/
+let output = []
+recursion(output,[] , array);
+//output.sort((a, b) => a.length - b.length);
+
+//console.log(output);
+let opt = orderArraysInArray(output , size);
+console.log(opt);
+
+//let arr = [[2] , [3] , [1]]
+//console.log(arrayMergeSort(arr));
+
+
+for(let item of output){
+//    console.log(sumArrays(item));
+}
+//console.log(output);
