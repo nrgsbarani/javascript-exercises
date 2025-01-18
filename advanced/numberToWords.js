@@ -33,11 +33,51 @@ function numberToWords(input){
         [16, "sixteen"],
         [17, "seventeen"],
         [18, "eighteen"],
-        [19, "eleventeen"],
+        [19, "nineteen"],
+        [20, "twenty"],
+        [30 ,"thirty"],
+        [40 ,"forty"],
+        [50 ,"fifty"],
+        [60, "sixty"],
+        [70, "seventy"],
+        [80, "eighty"],
+        [90, "ninety"],
     ])
-    let array = new String( input + "").split("").map(Number);
-    for
+    let digits = new String( input + "").split("").map(Number);
+    //console.log(digits);
+    let words = "";
+    for (let i = 0; i < digits.length; i++) {
+        let stage = digits.length - i;
+        let digit = digits[i];
+        let step = "";
+        if ( stage === 4 ) {
+            step += Numbers.get(digit) + " " + "thousand ";
+        }else if ( stage === 3 ) {
+            step += Numbers.get(digit) + " " + "hundred ";
+        }else if ( stage === 2 ) {
 
+            if (digit === 1) {
+                digit = digit * 10 + digits[i + 1];
+                digits[i + 1] = 0;
+                step += Numbers.get(digit);
+            }else {
+                digit = digit * 10;
+                step += Numbers.get(digit);
+            }
+
+        }else if ( stage === 1 ) {
+            if ( digit === 0 ) {
+                continue;
+            } else {
+                step += " " + Numbers.get(digit);
+            }
+        }
+
+        words += step;
+    }
+
+    //console.log(words);
+    return words.trim();
 }
 
 module.exports = numberToWords;
