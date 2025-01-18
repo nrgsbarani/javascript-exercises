@@ -6,5 +6,29 @@
 </head>
 <body>
 <div id="clock"></div>
+<script >
+
+    setInterval(() => {
+        let time = '';
+        //console.clear()
+        //console.log(hour + ":" + minute + ":" + second);
+        time = getCurrntTime();
+        //console.log(time);
+        document.getElementById('clock').innerHTML = time;
+        //console.log(document.getElementById('clock').innerHTML);
+        //clockElement.textContent = `${hour}:${minute}:${second}`;
+        //process.stdout.write(hour + ":" + minute + ":" + second);
+    }, 1000);
+
+    function getCurrntTime() {
+        let date = new Date();
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+        let second = date.getSeconds();
+
+        return `${hour}:${minute}:${second}`;
+    }
+
+</script>
 </body>
 </html>

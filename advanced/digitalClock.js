@@ -20,37 +20,42 @@
 
 // Write your solution here
 
-//const jsdom = require("jsdom");
 
-
-//document.documentElement.innerHtml
-
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-
-
-
-
-
-
+// this problem solve in clock.html
 
 
 
 function digitalClock(){
 
+    //console.log( document.getElementById('clock') );
 
-    setInterval(() => {
-        let date = new Date();
-        let hour = date.getHours();
-        let minute = date.getMinutes();
-        let second = date.getSeconds();
+    let time = '';
+    //console.clear()
+    //console.log(hour + ":" + minute + ":" + second);
+    time = getCurrntTime();
+    //console.log(time);
+    document.getElementById('clock').innerHTML = time;
+
+    /*setInterval(() => {
+        let time = '';
         //console.clear()
-        console.log(hour + ":" + minute + ":" + second);
-        document.getElementById('clock').innerHTML = `${hour}:${minute}:${second}`;
+        //console.log(hour + ":" + minute + ":" + second);
+        time = getCurrntTime();
+        //console.log(time);
+        document.getElementById('clock').innerHTML = time;
+        //console.log(document.getElementById('clock').innerHTML);
         //clockElement.textContent = `${hour}:${minute}:${second}`;
         //process.stdout.write(hour + ":" + minute + ":" + second);
-    }, 200);
+    }, 200);*/
 }
 
+function getCurrntTime() {
+    let date = new Date();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+
+    return `${hour}:${minute}:${second}`;
+}
 
 module.exports = digitalClock;
