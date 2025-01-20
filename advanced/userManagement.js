@@ -13,5 +13,22 @@
  * removeUser("Alice");
  * showUsers() should return [].
  */
+let list = []
+addUser = (user) => {
+    if (!list.includes(user)) {
+        list.push(user)
+    }
+}
+
+showUsers = () => {
+    return list
+}
+
+removeUser = (user) => {
+    let index = list.indexOf(user)
+    if (index !== -1) {
+        list.splice(index, 1)
+    } 
+}
 
 module.exports = { addUser, removeUser, showUsers };

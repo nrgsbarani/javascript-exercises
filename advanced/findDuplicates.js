@@ -11,5 +11,21 @@
  */
 
 // Write your solution here
+findDuplicates = (arr) => {
+    let countMap = {}
+    let duplicates = []
+  
+    for (let num of arr) {
+      countMap[num] = (countMap[num] || 0) + 1
+    }
+  
+    for (let num in countMap) {
+      if (countMap[num] > 1) {
+        duplicates.push(Number(num))
+      }
+    }
+  
+    return duplicates;
+}
 
 module.exports = findDuplicates;
