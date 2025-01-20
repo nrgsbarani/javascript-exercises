@@ -12,6 +12,7 @@
 // Write your solution here
 function printMessage(message) {
   console.log(message);
+  return printMessage
 }
 
 module.exports = printMessage;
