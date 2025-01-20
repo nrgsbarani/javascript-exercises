@@ -14,4 +14,7 @@ function printMessage(message) {
   console.log(message);
 }
 
+let text = 'Hello, world!'
+printMessage(text)
+
 module.exports = printMessage;

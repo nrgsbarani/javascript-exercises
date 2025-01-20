@@ -11,5 +11,13 @@
  */
 
 // Write your solution here
+celsiusToFahrenheit = (celsius) => { return (celsius * 9/5) + 32 }
+
+let C1 = 0
+let C2 = 100
+let C3 = 25
+celsiusToFahrenheit(C1)
+celsiusToFahrenheit(C2)
+celsiusToFahrenheit(C3)
 
 module.exports = celsiusToFahrenheit;
