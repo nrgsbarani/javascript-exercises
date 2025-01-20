@@ -11,5 +11,19 @@
  */
 
 // Write your solution here
+factorial = (input) => {
+    let factor = 1
+    for (let i = 1; i <= input; i++) {
+        factor *= i
+    }
+    return factor
+}
 
+let inp = 5
+let inp2= 0
+let inp3 = 7
+
+factorial(inp)
+factorial(inp2)
+factorial(inp3)
 module.exports = factorial;
