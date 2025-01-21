@@ -12,18 +12,12 @@
 
 // Write your solution here
 function isEvenOrOdd(number) {
-    if (number %2 == 0){
-        console.log("Even")
+    if (number % 2 == 0){
         return "Even"
-    }
-    else if (number %2 == 1){
-        console.log("Odd")
+    } else if (number % 2 == 1){
         return "Odd"
-    }
-    else{
-        console.log("Error")
+    } else {
         return "Error"
-    }
-    return 
+    } 
 }
 module.exports = isEvenOrOdd;

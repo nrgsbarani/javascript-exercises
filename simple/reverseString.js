@@ -11,6 +11,7 @@
  */
 
 // Write your solution here
+
 function reverseString(string_input){
     let reverse=""
     let length = string_input.length;

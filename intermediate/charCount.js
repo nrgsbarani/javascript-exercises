@@ -12,4 +12,18 @@
 
 // Write your solution here
 
+function charCount(Name,set){
+    var len = Name.length;
+    var count = 0;
+    for (i = 0 ; i < len ; i++)
+    {
+        if (Name[i] === set){
+            count += 1;
+        } else {
+            continue;
+        }
+    }
+    return count;
+}
+
 module.exports = charCount;
