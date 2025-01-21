@@ -21,7 +21,7 @@ function isPrime(number){
     {
         if (number == prime_tester[i]){
             Flag = 1
-        } else if (number % prime_tester[i] == 0){
+        } else if ((number % prime_tester[i] == 0) || (number == 1)){
             Flag = 0
             break
         } else if (number % prime_tester[i] != 0) {

@@ -11,5 +11,12 @@
  */
 
 // Write your solution here
-
+function fibonacci(number){
+    var result = [0,1]
+    for( i = 2 ; i < number ; i++ ){
+        result[i] = result[i-2] + result [i-1];
+    }
+    console.log (result)
+    return result;
+}
 module.exports = fibonacci;
