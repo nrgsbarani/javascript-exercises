@@ -15,7 +15,7 @@
 function reverseString(string_input){
     let reverse=""
     let length = string_input.length;
-    for(let i=length - 1 ; i >= 0 ; i--){
+    for(let i = length - 1 ; i >= 0 ; i--){
         reverse += string_input[i];
     }
     console.log(reverse);
