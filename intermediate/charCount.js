@@ -11,5 +11,14 @@
  */
 
 // Write your solution here
+function charCount(x,y){
+    let z = []
+    for(item of x){
+        z.push(item === y)
+    }
+    let m = z.filter((item) => item == true)
+    return m.length
+}
 
+charCount("hello","l")
 module.exports = charCount;
