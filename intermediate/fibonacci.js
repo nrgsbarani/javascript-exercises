@@ -12,4 +12,13 @@
 
 // Write your solution here
 
+function fibonacci(num){
+    let x = [0,1]
+    for (let i = 2 ; i < num ; i++){
+        
+        x.push(x[i-2]+x[i-1])
+
+    }
+  return x
+}
 module.exports = fibonacci;
