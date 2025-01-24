@@ -11,5 +11,20 @@
  */
 
 // Write your solution here
+function isPrime(x){
+    
+    switch(true){
+            
+        case(x === 2 || x === 3):
+            return true;
+            break;
 
+        case(x % 2 === 0 || x % (2+1) === 0 || x === 0 || x === 1):
+            return false;
+            break;
+
+        default:
+            return true;
+    }
+}
 module.exports = isPrime;
