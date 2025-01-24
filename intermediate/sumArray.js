@@ -12,4 +12,10 @@
 
 // Write your solution here
 
+function sumArray(x){
+    return x.reduce(function(total,value){
+        return total + value
+    })
+
+}
 module.exports = sumArray;
