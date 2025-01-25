@@ -18,5 +18,28 @@
  * (e.g., `<div id="clock"></div>`) to display the clock.
  */
 
+digitalClock = () => {
+    // Get system time
+    const now = new Date();
+
+    // Get hours, minutes and seconds
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    // add zero for single digit
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    // clock face : HH:MM:SS
+    const timeString = `${hours}:${minutes}:${seconds}`;
+
+    // adding the clock to the clock id in the HTML file
+    document.getElementById('clock').textContent = timeString;
+}
+
+// Update the clock
+setInterval(digitalClock, 1000);
 
 module.exports = digitalClock;

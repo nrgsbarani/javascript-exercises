@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        @font-face {
+            font-family: Vazir-bold;
+            src: url(./fonts/Vazir-Bold.woff2) format("woff2");
+            src: url(./fonts/Vazir-Bold.woff) format("woff");
+            src: url(./fonts/Vazir-Bold.ttf) format("truetype");
+        }
+        /* Body page style */
+        body {
+            margin: 0;
+            height: 100vh; /* Screen height equal to 100% of the screen */
+            display: flex;
+            justify-content: center; /* Vertical center */
+            align-items: center; /* Horizontal center */
+            background-color: #f7f9f2; /* Light background */
+        }
+
+        /* Circular frame for the clock */
+        #clock {
+            width: 300px; /* frame width */
+            height: 300px; /* frame height */
+            border-radius: 50%; /* Create a circle for the clock face */
+            background: linear-gradient(to right, #16222a, #3a6073); /* The background color of the clock face */
+            color: #FFFFFF; /* Clock text color */
+            font-family: 'Vazir-bold', sans-serif; /* Font */
+            font-size: 65px; /* Font size */
+            display: flex;
+            justify-content: center; /* Place the clock in the center of the circle */
+            align-items: center; /* Place the clock in the center of the circle */
+            text-align: center; /* Align text */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for the circle */
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+    </div>
+    <script src="./digitalClock.js"></script>
+</body>
+</html>
