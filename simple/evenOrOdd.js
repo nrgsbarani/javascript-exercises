@@ -12,16 +12,7 @@
 
 // Write your solution here
 isEvenOrOdd = (number) => {
-    if (number % 2 == 0) {
-        return 'Even'
-    } else {
-        return 'Odd'
-    }
+    return (number % 2 == 0) ? 'Even' : 'Odd';
 }
-
-let num1 = 20
-let num2 = 15
-isEvenOrOdd(num1)
-isEvenOrOdd(num2)
 
 module.exports = isEvenOrOdd;

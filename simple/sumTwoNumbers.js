@@ -11,13 +11,6 @@
  */
 
 // Write your solution here
-function sum(a, b) {
-  return a + b;
-}
-
-let num1 = 5
-let num2 = 10
-
-sum(num1 , num2)
+sum = (a ,b) => { return a + b; }
 
 module.exports = sum;
