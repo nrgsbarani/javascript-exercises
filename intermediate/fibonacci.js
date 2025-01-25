@@ -12,20 +12,12 @@
 
 // Write your solution here
 fibonacci = (counter) => {
-    let pre = 0, next = 1;
-    let fibonacci_array = [0]
-    for (let i = 1; i < counter; i++) {
-        let keep = pre + next
-        pre = next
-        next = keep
-        fibonacci_array[i] = pre
+    let fibonacci_array = [0, 1];
+    for (let i = 2; i < counter; i++) {
+        fibonacci_array[i] = fibonacci_array[i - 1] + fibonacci_array[i - 2];
     }
-    return fibonacci_array
+    return fibonacci_array;
+
 }
 
-let fibo1 = 5
-let fibo2 = 3
-
-fibonacci(fibo1)
-fibonacci(fibo2)
 module.exports = fibonacci;

@@ -17,11 +17,4 @@ sumArray = (num_array) => {
     }, 0)
 }
 
-let array1 = [1, 2, 3]
-let array2 = [0, 0, 0]
-let array3 = [1, -1, 1]
-
-sumArray(array1)
-sumArray(array2)
-sumArray(array3)
 module.exports = sumArray;

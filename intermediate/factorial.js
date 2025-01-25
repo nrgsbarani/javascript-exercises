@@ -19,11 +19,4 @@ factorial = (input) => {
     return factor
 }
 
-let inp = 5
-let inp2= 0
-let inp3 = 7
-
-factorial(inp)
-factorial(inp2)
-factorial(inp3)
 module.exports = factorial;

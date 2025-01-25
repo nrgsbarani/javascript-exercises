@@ -16,6 +16,4 @@ charCount = (string , char) => {
     return string.filter(item => item === char).length
 }
 
-charCount('hello' , 'l')
-charCount('world' , 'o')
 module.exports = charCount;
