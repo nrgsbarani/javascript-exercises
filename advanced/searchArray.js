@@ -11,7 +11,7 @@
  * searchArray([1, 2, 3, 4], 5) should return false.
  */
 searchArray = (arr, value) => {
-    return arr.includes(value);  // بررسی اینکه آیا مقدار مورد نظر در آرایه وجود دارد یا خیر
+    return arr.includes(value);  // Checking the availability of the value
 }
 
 module.exports = searchArray;

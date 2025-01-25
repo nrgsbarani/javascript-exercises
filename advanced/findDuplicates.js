@@ -12,8 +12,8 @@
 
 // Write your solution here
 findDuplicates = (arr) => {
-    let countMap = {}
-    let duplicates = []
+    let countMap = {} // An object containing a key is the content of the array and a value is the number of element
+    let duplicates = [] // A list containing the keys in object that duplicated
   
     for (let num of arr) {
       countMap[num] = (countMap[num] || 0) + 1
