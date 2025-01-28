@@ -15,9 +15,10 @@
 
 // Write your solution here
 
-add = (a, b) => a + b;
-subtract = (a, b) => a - b;
-multiply = (a, b) => a * b;
-divide = (a, b) => b === 0 ? NaN : a / b;
+add = (a = 0, b = 0) => a + b;
+subtract = (a = 0, b = 0 ) => a - b;
+multiply = (a = 0, b = 0) => a * b;
+divide = (a = 0 , b = 1) => b === 0 ? NaN : a / b;
+
 
 module.exports = { add, subtract, multiply, divide };
