@@ -12,6 +12,21 @@
 
 // Write your solution here
 
+const findDuplicates = arr => {
+    const seen = new Set();
+    const duplicates = new Set();
+
+    for (let item of arr) {
+        if (seen.has(item)) {
+            duplicates.add(item);
+        } else {
+            seen.add(item);
+        }
+    }
+    return [...duplicates];
+}
+
+/*
 function findDuplicates(input) {
     let output = [];
     let lastestelement = NaN;
@@ -34,5 +49,6 @@ function findDuplicates(input) {
 
     return output;
 }
+*/
 
 module.exports = findDuplicates;
