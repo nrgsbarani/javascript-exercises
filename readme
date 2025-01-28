@@ -69,6 +69,7 @@ Please review the solved exercises and provide your feedback for writing cleaner
 
 this is some git commands use to switch and work with branch
 
+```
 git checkout -b refactor-branch
 git branch -a
 git add .
@@ -76,3 +77,4 @@ git commit -m " Refactor : calculator problem "
 git checkout main
 git checkout refactor-branch
 git push -u origin refactor-branch
+```
