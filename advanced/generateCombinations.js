@@ -11,6 +11,7 @@
  * [ [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3] ].
  */
 
+/*
 function generateCombinations(input) {
     let output = [];
     let size = input.length;
@@ -46,11 +47,13 @@ function orderArraysInArray(arrays , count) {
     }
     return output;
 }
+*/
 
 function sumArrays(array) {
     return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
 
+/*
 function arrayMergeSort(array) {
     // console.log(array);
     if (array.length === 0 || array.length === 1) return array;
@@ -81,8 +84,38 @@ function arrayMerge(left , right) {
 
     return output;
 }
+*/
 
 
+const generateCombinations = (input) => {
+    const result = [];
+    // Generate combinations recursively
+    generateCombinationRecursively(input, 0, [], result);
+
+    // Sort combinations first by length, then by sum
+    return result.sort((a, b) => a.length - b.length || sumArray(a) - sumArray(b));
+}
+
+
+const generateCombinationRecursively = (input ,  index , currentCombination, result) => {
+
+    if (index === input.length) {
+        if (currentCombination.length > 0) {
+            result.push([...currentCombination]);
+        }
+        return;
+    }
+
+
+    // Include Current
+    currentCombination.push(input[index])
+    generateCombinationRecursively(input , index++ , currentCombination, result);
+
+
+    // Exclue Current
+    currentCombination.pop();
+    generateCombinationRecursively(input , index++ , currentCombination, result);
+}
 
 
 
