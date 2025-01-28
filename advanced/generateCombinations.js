@@ -109,12 +109,12 @@ const generateCombinationRecursively = (input ,  index , currentCombination, res
 
     // Include Current
     currentCombination.push(input[index])
-    generateCombinationRecursively(input , index++ , currentCombination, result);
+    generateCombinationRecursively(input , index + 1 , currentCombination, result);
 
 
     // Exclue Current
     currentCombination.pop();
-    generateCombinationRecursively(input , index++ , currentCombination, result);
+    generateCombinationRecursively(input , index + 1 , currentCombination, result);
 }
 
 
