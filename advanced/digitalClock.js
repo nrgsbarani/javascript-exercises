@@ -26,27 +26,9 @@
 
 
 function digitalClock(){
-
-    //console.log( document.getElementById('clock') );
-
     let time = '';
-    //console.clear()
-    //console.log(hour + ":" + minute + ":" + second);
     time = getCurrntTime();
-    //console.log(time);
     document.getElementById('clock').innerHTML = time;
-
-    /*setInterval(() => {
-        let time = '';
-        //console.clear()
-        //console.log(hour + ":" + minute + ":" + second);
-        time = getCurrntTime();
-        //console.log(time);
-        document.getElementById('clock').innerHTML = time;
-        //console.log(document.getElementById('clock').innerHTML);
-        //clockElement.textContent = `${hour}:${minute}:${second}`;
-        //process.stdout.write(hour + ":" + minute + ":" + second);
-    }, 200);*/
 }
 
 function getCurrntTime() {
@@ -54,6 +36,11 @@ function getCurrntTime() {
     let hour = date.getHours();
     let minute = date.getMinutes();
     let second = date.getSeconds();
+
+    // Add leading zero if single digit
+    hour = hour < 10 ? '0' + hour : hour;
+    minute = minute < 10 ? '0' + minute : minute;
+    second = second < 10 ? '0' + second : second;
 
     return `${hour}:${minute}:${second}`;
 }
