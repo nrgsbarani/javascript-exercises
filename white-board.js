@@ -353,6 +353,7 @@ function numberToWords(input){
 
 console.log(numberToWords(20))
 */
+/*
 
 function generateCombinations(input) {
     let output = [];
@@ -459,10 +460,10 @@ function copyArrays(input) {
 
 let array = [1, 2, 3]
 let size = array.length;
-/*console.log(array.slice(0,1))
+/!*console.log(array.slice(0,1))
 console.log(array.slice(1,))
 console.log(array)
-console.log(array.slice(5,))*/
+console.log(array.slice(5,))*!/
 let output = []
 recursion(output,[] , array);
 //output.sort((a, b) => a.length - b.length);
@@ -479,3 +480,4 @@ for(let item of output){
 //    console.log(sumArrays(item));
 }
 //console.log(output);
+*/
