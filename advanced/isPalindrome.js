@@ -12,17 +12,6 @@
  * isPalindrome(10) should return false.
  */
 
-isPalindrome = (number) => number < 0 ? false : prepare2palindrome( number );
-
-function prepare2palindrome(number) {
-    let array = new String( number + "").split("").map(Number);
-    return palindromeRecursive(array , 0 ,array.length - 1);
-}
-
-function palindromeRecursive(array , start , end) {
-    if(start >= end ) return true;
-    else if(array[start] === array[end]) return palindromeRecursive(array, start+1 ,end-1) ;
-    else return false;
-}
+isPalindrome = (number) => number < 0 ? false : number.toString() === [...number.toString()].reverse().join("");
 
 module.exports = isPalindrome;
