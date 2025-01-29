@@ -11,7 +11,7 @@
  */
 
 // Write your solution here
-function isPrime(number ) {
+const isPrime = (number ) => {
     if (number < 2 ) { return false }
     if (number === 2) return true;
     let max = Math.floor(number ** 0.5) + 1 ;
