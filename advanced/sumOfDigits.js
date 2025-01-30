@@ -10,4 +10,16 @@
  * sumOfDigits(987) should return 24 (9 + 8 + 7).
  */
 
+function sumOfDigits(x){
+        let y = x+""
+        let numbers = y.split("")
+    
+        let sum = 0
+        for (let i = 0; i < numbers.length; i++) {
+          sum += parseInt(numbers[i])
+        }
+        return sum
+}
+
+
 module.exports = sumOfDigits;
