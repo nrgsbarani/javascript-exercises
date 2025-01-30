@@ -19,6 +19,4 @@ function charCount(x,y){
     let m = z.filter((item) => item == true)
     return m.length
 }
-
-charCount("hello","l")
 module.exports = charCount;
