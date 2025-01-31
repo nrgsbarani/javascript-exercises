@@ -10,5 +10,12 @@
  * searchArray([1, 2, 3, 4], 3) should return true.
  * searchArray([1, 2, 3, 4], 5) should return false.
  */
+function searchArray(array,num){
+    if(array.find(x => x === num )){
+        return true
+    }else{
+        return false
+    }
 
+ }
 module.exports = searchArray;
