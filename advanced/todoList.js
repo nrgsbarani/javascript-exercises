@@ -13,5 +13,18 @@
  */
 
 // Write your solution here
+let myList = []
+
+function addTask(name){
+        myList.push(name)
+    }
+    
+function removeTask(name){
+        myList = myList.filter(user => user !== name);
+    }
+    
+function showTasks(){
+        return myList
+    }
 
 module.exports = { addTask, removeTask, showTasks };
