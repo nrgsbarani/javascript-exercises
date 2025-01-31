@@ -11,5 +11,14 @@
  * isPalindrome(-121) should return false (negative numbers are not palindromes).
  * isPalindrome(10) should return false.
  */
+function isPalindrome(num){
+    
+    const z1 = String(num).split('').map(Number).reverse().join('')
+    if(z1 == num){
+        return true
+    }else{
+        return false
+    }
 
+ }
 module.exports = isPalindrome;

@@ -12,11 +12,11 @@
 
 function sumOfDigits(x){
         let y = x+""
-        let numbers = y.split("")
+        let numbers = String(y).split("").map(Number)
     
         let sum = 0
         for (let i = 0; i < numbers.length; i++) {
-          sum += parseInt(numbers[i])
+          sum += numbers[i]
         }
         return sum
 }
