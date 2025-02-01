@@ -18,5 +18,20 @@
  * (e.g., `<div id="clock"></div>`) to display the clock.
  */
 
+function digitalClock (){
+
+    let clockElement = document.createElement('div')
+    document.body.appendChild(clockElement)//gpt
+    
+    setInterval(() => {
+        const x = new Date()
+        const seconds = x.getSeconds()
+        const minutes  = x.getMinutes()
+        const hours = x.getHours()
+        const time = `${hours}:${minutes }:${seconds}`
+            clockElement.textContent = time//gpt
+    },1000)
+
+}
 
 module.exports = digitalClock;
