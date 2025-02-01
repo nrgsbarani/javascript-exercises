@@ -11,3 +11,16 @@
  */
 
 module.exports = calculateAverage;
+
+function calculateAverage (arr) {
+    let sum = arr.reduce(function(accumulator, currentValue){
+        return accumulator + currentValue;
+    },0);
+
+    let length = arr.length;
+    let average = sum / length;
+    return average;
+}
+
+console.log(calculateAverage([1,2,3,4]));
+
