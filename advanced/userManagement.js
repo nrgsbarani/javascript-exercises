@@ -14,4 +14,18 @@
  * showUsers() should return [].
  */
 
+let myList = []
+
+function addUser(name){
+        myList.push(name)
+    }
+
+function removeUser(name){
+        myList = myList.filter(user => user !== name);
+    }
+
+function showUser(){
+        return myList
+    }
+
 module.exports = { addUser, removeUser, showUsers };
