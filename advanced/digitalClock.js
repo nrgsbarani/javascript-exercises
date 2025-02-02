@@ -20,18 +20,18 @@
 
 function digitalClock (){
 
-    let clockElement = document.createElement('div')
+    let clockElement = document.getElementById('clock')
     document.body.appendChild(clockElement)//gpt
     
-    setInterval(() => {
+    function updateClock(){
         const x = new Date()
-        const seconds = x.getSeconds()
-        const minutes  = x.getMinutes()
-        const hours = x.getHours()
-        const time = `${hours}:${minutes }:${seconds}`
+        const seconds = x.getSeconds().toString().padStart(2, "0")
+        const minutes  = x.getMinutes().toString().padStart(2, "0")
+        const hours = x.getHours().toString().padStart(2, "0")
+        const time = `${hours}:${minutes}:${seconds}`
             clockElement.textContent = time//gpt
-    },1000)
-
+        console.log(time)
+    }
+    setInterval(updateClock,1000)
 }
-
 module.exports = digitalClock;
