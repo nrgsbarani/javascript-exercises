@@ -12,3 +12,28 @@
  */
 
 module.exports = generateCombinations;
+
+function generateCombinations (array) {
+    const arr = [];
+
+    for (let i = 0; i < array.length; i++) {
+        arr.push([array[i]]);
+    }
+
+
+    for (let i = 0; i < array.length; i++) {
+        for (let j = i + 1; j < array.length; j++) {
+            arr.push([array[i], array[j]]);
+        }
+        }
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+            for (let k = j + 1; k < array.length; k++) {
+                arr.push([array[i], array[j], array[k]]);
+            }
+        }
+    }
+   return arr;
+}
+
+console.log(generateCombinations([1, 2, 3])); 
