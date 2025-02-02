@@ -14,4 +14,20 @@
 
 module.exports = isPalindrome;
 
+function isPalindrome(number){
+    let word = number.toString();
+    let char = word.split('');
+    let reversed = char.reverse();
+    let reversedword = reversed.join('');
+    if (reversedword === word) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+console.log(isPalindrome(121));
+console.log(isPalindrome(-121));
+console.log(isPalindrome(1321));
 
