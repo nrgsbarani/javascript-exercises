@@ -12,3 +12,10 @@
  */
 
 module.exports = searchArray;
+
+function searchArray(arr, target) {
+    return arr.includes(target);
+}
+
+console.log(searchArray([1, 2, 3, 4], 5));
+console.log(searchArray([1, 2, 3, 4], 4));
