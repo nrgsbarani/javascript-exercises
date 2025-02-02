@@ -12,4 +12,19 @@
 
 // Write your solution here
 
+function findDuplicates(array){
+
+    let answer = []
+
+    let x = array.sort((a,b) => a-b)
+    for(let i=0 ; i < x.length ; i++){
+        if (x[i] === x[i+1]){ 
+            if(!answer.includes(x[i])){
+              answer.push(x[i])
+            }
+        }
+    }
+    return answer
+}
+
 module.exports = findDuplicates;
