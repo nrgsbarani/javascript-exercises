@@ -14,4 +14,26 @@
  * showUsers() should return [].
  */
 
+let myList = []
+
+function addUser(name){
+        if(myList.includes(name)){
+
+        }else{
+            myList.push(name)
+        }
+    }
+    
+function removeUser(name){
+        if(myList.includes(name)){
+            let x = myList.indexOf(name)
+            myList.splice(x,1)
+        }
+        
+}
+    
+function showUsers(){
+        return myList
+    }
+
 module.exports = { addUser, removeUser, showUsers };
