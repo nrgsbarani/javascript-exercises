@@ -30,7 +30,7 @@ function generateCombinations(array){
         for (let j = i + 1; j < array.length; j++) {//gptاین لاین با 
         result.push([array[i], array[j]]);
         }
-        }//gptاین لاین با 
+        }
 
         result.push(array)
 
