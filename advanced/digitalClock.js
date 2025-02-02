@@ -21,7 +21,7 @@
 function digitalClock (){
 
     let clockElement = document.getElementById('clock')
-    document.body.appendChild(clockElement)//gpt
+    document.body.appendChild(clockElement)
     
     function updateClock(){
         const x = new Date()
@@ -29,7 +29,7 @@ function digitalClock (){
         const minutes  = x.getMinutes().toString().padStart(2, "0")
         const hours = x.getHours().toString().padStart(2, "0")
         const time = `${hours}:${minutes}:${seconds}`
-            clockElement.textContent = time//gpt
+            clockElement.textContent = time
         console.log(time)
     }
     setInterval(updateClock,1000)

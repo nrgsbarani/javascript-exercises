@@ -12,6 +12,8 @@
 
 // Write your solution here
 
+
+// تمام لاین ها به جز 36 تا 45 کار gpt :(
 function numberToWords(number) {
     if (number === 0) {
       return "zero";
