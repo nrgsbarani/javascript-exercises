@@ -39,8 +39,17 @@ function digitalClock() {
 
     let time = hours + ":" + minutes + ":" + seconds;
 
-    document.getElementById("clock").innerHTML = time;
+    let clockelement = document.getElementById("clock");
 
+    if (!clockelement) {
+
+        clockelement = document.createElement("div");
+        clockelement.id = "clock";
+        document.body.appendChild(clockelement);
+
+    } else {
+        clockelement.textContent = time;
+    }
 }
 setInterval(digitalClock, 1000);
 digitalClock();
