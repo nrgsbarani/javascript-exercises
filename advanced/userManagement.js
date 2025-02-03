@@ -15,3 +15,32 @@
  */
 
 module.exports = { addUser, removeUser, showUsers };
+let users = [];
+beforeEach(() => {
+    users = []; 
+});
+function addUser(user) {
+    users.push(user);
+return `user added: ${user}`;
+}
+
+function removeUser(user) {
+    let index = users.indexOf(user);
+    if (index !== -1) {
+        users.splice(index, 1);
+        return `user removed: ${user}`;
+    } else {
+        return `user ${user} not found`;
+    }
+}
+
+function showUsers() {
+    return users.length > 0 ? users : "No users available!";
+}
+
+console.log(addUser("Alice")); 
+console.log(addUser("Sareh")); 
+console.log(showUsers()); 
+console.log(removeUser("Alice"));
+console.log(showUsers()); 
+console.log(removeUser("Molly"));
