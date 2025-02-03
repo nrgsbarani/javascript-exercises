@@ -11,3 +11,13 @@
  */
 
 module.exports = sumOfDigits;
+function sumOfDigits (number) {
+    let sum = 0;
+    let str = number.toString();
+    let spl = str.split('');
+    let transform = spl.map(Number);
+    let result = transform.reduce((sum , digit) => sum + digit);
+    return result;
+}
+
+console.log(sumOfDigits(123));
