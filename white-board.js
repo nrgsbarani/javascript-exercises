@@ -482,6 +482,7 @@ for(let item of output){
 //console.log(output);
 */
 
+
 // const divide = (a,b) => b===0 ? NaN : a/b ;
 
 // const calculateAverage = (arr) => arr.reduce( (sum , current) => sum + current , 0 ) / arr.length ;
@@ -536,3 +537,4 @@ console.log(removeUser("Molly"));
 */
 
 //console.log(isPalindrome(12321));
+

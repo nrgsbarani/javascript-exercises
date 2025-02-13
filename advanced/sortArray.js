@@ -11,7 +11,7 @@
 //sortArray = (array) => array.sort();
 // solve this problem with merge sort algorithm
 
-function mergeSort(array) {
+/*function mergeSort(array) {
     if (array.length === 0 || array.length === 1) return array;
     else return merge(mergeSort(array.slice(0 ,array.length/2 )), mergeSort(array.slice(array.length/2,)));
 }
@@ -41,8 +41,8 @@ function merge(left , right ) {
     }
 
     return output;
-}
+}*/
 
-sortArray = (array) => mergeSort(array);
+sortArray = (array) => array.sort((a, b ) => a - b );
 
 module.exports = sortArray;

@@ -16,9 +16,9 @@
 
 let userList = new Set([]);
 
-const addUser = (user) => userList.has(user) ? false : userList.add(user) ;
-const showUsers = () => Array.from(userList);
-const removeUser = (user) => userList.delete(user);
+addUser = (user) => userList.has(user) ? false : userList.add(user) ;
+showUsers = () => [...userList];
+removeUser = (user) => userList.has(user) ? userList.delete(user) : false ;
 
 
 module.exports = { addUser, removeUser, showUsers };

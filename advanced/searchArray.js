@@ -14,11 +14,6 @@
 
 // linear search
 
-function searchArray(array , key){
-    for (let item of array ){
-        if (key === item) return true
-    }
-    return false;
-}
+const searchArray = (array, key) => array.includes(key);
 
 module.exports = searchArray;

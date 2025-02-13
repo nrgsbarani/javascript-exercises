@@ -15,7 +15,7 @@
 // Write your solution here
 let Tasks = new Set([]);
 addTask = (task) => Tasks.has(task) ? false : Tasks.add(task);
-removeTask = (task) => Tasks.delete(task);
-showTasks =() => Array.from(Tasks);
+removeTask = (task) => Tasks.has(task) ? Tasks.delete(task) : false;
+showTasks =() => [...Tasks];
 
 module.exports = { addTask, removeTask, showTasks };

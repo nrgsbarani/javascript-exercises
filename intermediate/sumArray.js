@@ -13,16 +13,7 @@
 // Write your solution here
 
 // write using reduce function
-sumArray = (arr) => arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+sumArray = (arr = []) => arr.length === 0 ? 0 : arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-
-// write using iterators
-/*function sumArray(arr) {
-    let accumulator = 0;
-    for (let item of arr ) {
-        accumulator += item;
-    }
-    return accumulator;
-}*/
 
 module.exports = sumArray;
