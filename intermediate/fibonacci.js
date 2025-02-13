@@ -11,13 +11,8 @@
  */
 
 // Write your solution here
-fibonacci = (counter) => {
-    let fibonacci_array = [0, 1];
-    for (let i = 2; i < counter; i++) {
-        fibonacci_array[i] = fibonacci_array[i - 1] + fibonacci_array[i - 2];
-    }
-    return fibonacci_array;
-
-}
+const fibonacci = n => [...Array(n)].reduce((arr, _, i) => 
+    arr.concat(i < 2 ? i : arr[i - 1] + arr[i - 2]), []
+);
 
 module.exports = fibonacci;
