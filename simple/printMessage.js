@@ -10,6 +10,6 @@
  */
 
 // Write your solution here
-printMessage = (message) => { console.log(message); }
+printMessage = (message) => console.log(message); 
 
 module.exports = printMessage;
