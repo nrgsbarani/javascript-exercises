@@ -353,6 +353,7 @@ function numberToWords(input){
 
 console.log(numberToWords(20))
 */
+/*
 
 function generateCombinations(input) {
     let output = [];
@@ -459,10 +460,10 @@ function copyArrays(input) {
 
 let array = [1, 2, 3]
 let size = array.length;
-/*console.log(array.slice(0,1))
+/!*console.log(array.slice(0,1))
 console.log(array.slice(1,))
 console.log(array)
-console.log(array.slice(5,))*/
+console.log(array.slice(5,))*!/
 let output = []
 recursion(output,[] , array);
 //output.sort((a, b) => a.length - b.length);
@@ -479,3 +480,59 @@ for(let item of output){
 //    console.log(sumArrays(item));
 }
 //console.log(output);
+*/
+
+// const divide = (a,b) => b===0 ? NaN : a/b ;
+
+// const calculateAverage = (arr) => arr.reduce( (sum , current) => sum + current , 0 ) / arr.length ;
+
+/*function generateCombinations(array) {
+    let pushed_Array = [];
+    function helper(start, current_combination) {
+        if (current_combination.length > 0) {
+            pushed_Array.push([...current_combination]);
+        }
+        for (let i = start; i < array.length; i++) {
+            current_combination.push(array[i]);
+            helper(i + 1, current_combination);
+            current_combination.pop();
+        }
+    }
+    helper(0, []);
+    return pushed_Array.sort((a, b) => a.length - b.length);
+}*/
+
+//const isPalindrome = (num) => num > 0 && num === Number(num.toString().split("").reverse().join("")) ;
+
+//  searchArray = (array, target) => array.includes(target);
+
+//const sortArray = (array) => array.sort((a, b) => a - b);
+
+//const sumOfDigits = (num) => {
+//    let num_array = num.toString().split("").map(Number)
+//    return num_array.reduce((acc, curr) =>  acc + curr , 0);
+//}
+
+//const charCount = (str, char) => [...str].filter(item => item === char).length;
+
+//const isPalindrome = (num) => Number.isInteger(num) && num >= 0 && num === Number([...num.toString()].reverse().join("")) ;
+
+/*
+
+
+let users = new Set([]);
+
+const addUser = (user) => users.has(user) ? false : users.add(user);
+const removeUser = (user) => users.delete(user);
+const showUsers = () => Array.from(users);
+
+console.log(addUser("Alice"));
+console.log(addUser("Sareh"));
+console.log(showUsers());
+console.log(removeUser("Alice"));
+console.log(showUsers());
+console.log(removeUser("Molly"));
+
+*/
+
+//console.log(isPalindrome(12321));
