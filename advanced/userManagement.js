@@ -1,4 +1,3 @@
-const {add} = require("./calculator");
 /**
  * Problem:
  * Write a simple user management system that allows adding and removing users,
