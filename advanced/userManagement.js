@@ -1,3 +1,4 @@
+const {add} = require("./calculator");
 /**
  * Problem:
  * Write a simple user management system that allows adding and removing users,
@@ -13,22 +14,9 @@
  * removeUser("Alice");
  * showUsers() should return [].
  */
-let list = []
-addUser = (user) => {
-    if (!list.includes(user)) {
-        list.push(user)
-    }
-}
-
-showUsers = () => {
-    return list
-}
-
-removeUser = (user) => {
-    let index = list.indexOf(user)
-    if (index !== -1) {
-        list.splice(index, 1)
-    } 
-}
+let list = new Set([]);
+addUser = (user) => list.has(user) ? false : list.add(user);
+removeUser = (user) => list.has(user) ? list.delete(user) : false;
+showUsers = () => [...list];
 
 module.exports = { addUser, removeUser, showUsers };
