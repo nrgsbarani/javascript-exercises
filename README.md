@@ -71,7 +71,8 @@ Please review the solved exercises and provide your feedback for writing cleaner
 
 this is some git commands use to switch and work with branch
 
-```
+```bash
+
 git checkout -b refactor-branch
 git branch -a
 git add .
@@ -80,3 +81,153 @@ git checkout main
 git checkout refactor-branch
 git push -u origin refactor-branch
 ```
+
+# How to send " Pull Request " to your Friend's Repository 
+
+## 1. Add the Other Person's Repository as a Remote
+
+If you haven't already added the other person's repository as a remote, you need to do that first.
+
+1. First, if you don't have your project on your system, clone it. 
+
+```bash
+
+git clone https://github.com/your-username/your-fork.git
+cd your-fork
+```
+
+2. Add the other person's repository as a remote:
+
+```bash
+
+git remote add other-person https://github.com/other-person/their-fork.git
+```
+
+for example in our case we can do 
+
+```bash
+
+git remote add maede https://github.com/maedemajnoon/javascript-exercises.git
+```
+
+3. using below command we can very all remotes 
+
+```bash
+
+git remote -v
+```
+
+You should see something like this:
+
+```
+maede   https://github.com/maedemajnoon/javascript-exercises.git (fetch)
+maede   https://github.com/maedemajnoon/javascript-exercises.git (push)
+origin  https://github.com/amirdadipoor/javascript-exercises.git (fetch)
+origin  https://github.com/amirdadipoor/javascript-exercises.git (push)
+upstream        https://github.com/Hesammousavi/javascript-exercises.git (fetch)
+upstream        https://github.com/Hesammousavi/javascript-exercises.git (push)
+```
+
+## 2. Switch Between Remotes
+
+To work with different remotes, you can use the git fetch, git checkout, and git push commands.
+
+1. Fetch branches from the other person's remote:
+
+```bash 
+
+git fetch other-person
+
+```
+
+2. Checkout a branch from the other person's repository:
+
+
+```bash
+
+git checkout -b new-branch-name other-person/branch-name
+```
+
+for example : 
+
+```bash
+
+git checkout -b amd-refactors maede/refactor
+```
+
+This creates a new branch in your local repository based on the branch from the other person's fork.
+
+3.Make changes and commit them:
+
+- Make your changes to the files.
+- Stage the changes:
+  ``` bash
+  
+  git add .
+  ```
+
+- Show Stage & chages & chages added to your stage 
+  ```bash 
+  git stage 
+  git diff 
+  git diff --staged
+  ```
+
+- Commit the changes:
+  ```bash
+  
+  git commit -m "Your commit message"
+  ``` 
+  
+4. Push the changes to the other person's repository:
+
+  *you dont have access apply your changes in your friend's repository*
+  
+- If you have write access to their repository, you can push directly:
+  ```bash
+  
+  git push other-person new-branch-name
+  ```
+- If you don't have write access, you'll need to push to your own fork and create a pull request (see the previous explanation).
+
+  ```bash 
+  git push your-remote(origin) new-branch-name
+  ```
+  
+## 3. Switch Back to Your Fork
+
+To switch back to working with your own fork:
+
+1. Fetch branches from your remote ( if u dont fetch your remote )  :
+
+```bash
+
+git fetch origin
+```
+
+2. Checkout a branch from your repository:
+
+```bash
+
+git checkout your-branch-name
+```
+
+3.Push changes to your fork:
+
+```bash
+
+git push origin your-branch-name
+```
+
+
+## 4 . Send Pull Request 
+
+To send pull-request to your friend's repository, follow the steps below:
+- start  
+
+![start](https://s6.uupload.ir/files/start_rhbk.png)
+
+- finish
+
+![finish](https://s6.uupload.ir/files/finish_isbp.png)
+
