@@ -15,16 +15,8 @@
 // Write your solution here
 let myList = []
 
-function addTask(name){
-        myList.push(name)
-    }
-    
-function removeTask(name){
-        myList = myList.filter(user => user !== name);
-    }//gptاین لاین با 
-    
-function showTasks(){
-        return myList
-    }
+addTask = (TASK) => myList.push(TASK)
+removeTask = (TASK) => myList = myList.filter(user => user !== TASK);    
+showTasks = () => myList
 
 module.exports = { addTask, removeTask, showTasks };
