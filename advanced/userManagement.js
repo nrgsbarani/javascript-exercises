@@ -13,10 +13,10 @@
  * removeUser("Alice");
  * showUsers() should return [].
  */
-let users = new Set();
+let list = new Set([]);
 
-const addUser = (user) => users.add(user);
-const showUsers = () => [...users];
-const removeUser = (user) => users.delete(user);
+addUser = (user) => list.has(user) ? false : list.add(user);
+removeUser = (user) => list.has(user) ? list.delete(user) : false;
+showUsers = () => [...list];
 
 module.exports = { addUser, removeUser, showUsers };
