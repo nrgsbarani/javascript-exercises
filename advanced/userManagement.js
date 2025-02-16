@@ -16,24 +16,10 @@
 
 let myList = []
 
-function addUser(name){
-        if(myList.includes(name)){
+addUser = (name) => myList.includes(name) ? false : myList.push(name)
 
-        }else{
-            myList.push(name)
-        }
-    }
-    
-function removeUser(name){
-        if(myList.includes(name)){
-            let x = myList.indexOf(name)
-            myList.splice(x,1)
-        }
-        
-}
-    
-function showUsers(){
-        return myList
-    }
+removeUser = (name) => myList.includes(!name) ? false  : myList.splice(myList.indexOf(name),1)
+
+showUsers = () => myList
 
 module.exports = { addUser, removeUser, showUsers };
