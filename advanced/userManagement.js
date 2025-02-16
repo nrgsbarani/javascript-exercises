@@ -13,5 +13,26 @@
  * removeUser("Alice");
  * showUsers() should return [].
  */
+let users = [];
+
+function addUser(user) {
+    if (!users.includes(user)) { // جلوگیری از اضافه شدن نام تکراری
+        users.push(user);
+    }
+    return users;
+}
+
+function removeUser(user) {
+    for (i = 0; i < users.length; i++) {
+        if (users[i] === user) { 
+            users.splice(i, 1); 
+            break; 
+        }
+    }
+    return users; 
+}
+function showUsers() {
+    return users;
+}
 
 module.exports = { addUser, removeUser, showUsers };

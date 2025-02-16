@@ -11,6 +11,7 @@
 
 // Bubble sort
 function sortArray(list_of_numbers){
+    
     len = list_of_numbers.length;
     for (i = 0 ; i < len ; i++){
         for(j = 0; j <= len -1; j++){

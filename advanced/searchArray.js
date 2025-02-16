@@ -11,6 +11,7 @@
  * searchArray([1, 2, 3, 4], 5) should return false.
  */
 function searchArray(number,set){
+    
     len = number.length;
     var Flag = 0;
     for ( i = 0 ; i < len ; i++){

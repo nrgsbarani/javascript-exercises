@@ -14,5 +14,27 @@
  */
 
 // Write your solution here
-
-module.exports = { add, subtract, multiply, divide };
+function add(x,y){
+    result = x + y ;
+    return result;
+}
+function subtract(x,y){
+    result = x - y;
+    return result;
+}
+function multiply(x,y){
+    result = x * y ;
+    return result;
+}
+function divide(x,y){
+    if (y == 0){
+        return NaN
+    } else if (y != 0) {
+        result = x / y;
+        return result;
+    } else {
+        return ""
+    }
+}
+var result = 0;
+module.exports = { add, subtract, multiply, divide }

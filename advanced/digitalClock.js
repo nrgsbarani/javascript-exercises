@@ -18,5 +18,23 @@
  * (e.g., `<div id="clock"></div>`) to display the clock.
  */
 
+function digitalClock() {
+    const clockElement = document.getElementById("clock");
+
+    function updateClock() {
+        const now = new Date();
+        const time = now.toLocaleTimeString('en-GB', { hour12: false });
+        if (clockElement) {
+            clockElement.textContent = time;
+        }
+    }
+
+    if (typeof jest === "undefined") {
+        setInterval(updateClock, 1000);
+    }
+
+    updateClock();
+}
 
 module.exports = digitalClock;
+
