@@ -10,15 +10,9 @@
  * sumOfDigits(987) should return 24 (9 + 8 + 7).
  */
 
-function sumOfDigits(x){
-        let y = x+""
-        let numbers = String(y).split("").map(Number)//gptاین لاین با 
-    
-        let sum = 0
-        for (let i = 0; i < numbers.length; i++) {
-          sum += numbers[i]
-        }
-        return sum
+function sumOfDigits(input){
+    let numbers = String(input + "").split("").map(Number)
+    return numbers.reduce((total,value)=> total += value)
 }
 
 
