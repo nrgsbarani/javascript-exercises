@@ -11,12 +11,5 @@
  */
 
 // Write your solution here
-function isEvenOrOdd (x){
-    if (x % 2 === 0){
-        return "Even"
-    } else{
-        return "Odd"
-    }
-}
-
+isEvenOrOdd = (x) => x % 2 === 0 ? "Even" : "Odd"
 module.exports = isEvenOrOdd;
