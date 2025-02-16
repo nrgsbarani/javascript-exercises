@@ -9,15 +9,6 @@
  * sumOfDigits(123) should return 6 (1 + 2 + 3).
  * sumOfDigits(987) should return 24 (9 + 8 + 7).
  */
-sumOfDigits = (num) => {
-    let numStr = num.toString();  
-    let sum = 0;
-  
-    for (let i = 0; i < numStr.length; i++) {
-      sum += parseInt(numStr[i]);
-    }
-  
-    return sum;
-}
+const sumOfDigits = (num) => [...num.toString()].reduce((sum, digit) => sum + +digit, 0);
 
 module.exports = sumOfDigits;

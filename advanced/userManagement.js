@@ -13,22 +13,10 @@
  * removeUser("Alice");
  * showUsers() should return [].
  */
-let list = []
-addUser = (user) => {
-    if (!list.includes(user)) {
-        list.push(user)
-    }
-}
+let users = new Set();
 
-showUsers = () => {
-    return list
-}
-
-removeUser = (user) => {
-    let index = list.indexOf(user)
-    if (index !== -1) {
-        list.splice(index, 1)
-    } 
-}
+const addUser = (user) => users.add(user);
+const showUsers = () => [...users];
+const removeUser = (user) => users.delete(user);
 
 module.exports = { addUser, removeUser, showUsers };

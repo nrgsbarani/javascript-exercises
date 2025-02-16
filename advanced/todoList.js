@@ -13,21 +13,10 @@
  */
 
 // Write your solution here
-let list = []
-addTask = (to_do) => {
-    if(!list.includes(to_do)) {
-        list.push(to_do)
-    }
-}
+let list = new Set();
 
-showTasks = () => {
-    return list
-}
+const addTask = (task) => list.add(task);
+const showTasks = () => [...list];
+const removeTask = (task) => list.delete(task);
 
-removeTask = (to_do) => {
-    let index = list.indexOf(to_do)
-    if (index !== -1) {
-        list.splice(index, 1)
-    } 
-}
 module.exports = { addTask, removeTask, showTasks };
