@@ -12,10 +12,5 @@
 
 // Write your solution here
 
-function sumArray(x){
-    return x.reduce(function(total,value){
-        return total + value
-    })
-
-}
+sumArray = (x) => x.reduce((total,value) => total += value)
 module.exports = sumArray;
