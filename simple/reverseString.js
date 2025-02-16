@@ -13,6 +13,4 @@
 // Write your solution here
 reverseString = (string) => { return string.split('').reverse().join('') }
 
-let text = 'Narges'
-reverseString(text)
 module.exports = reverseString;

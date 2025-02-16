@@ -11,21 +11,9 @@
  */
 
 // Write your solution here
-findDuplicates = (arr) => {
-    let countMap = {} // An object containing a key is the content of the array and a value is the number of element
-    let duplicates = [] // A list containing the keys in object that duplicated
-  
-    for (let num of arr) {
-      countMap[num] = (countMap[num] || 0) + 1
-    }
-  
-    for (let num in countMap) {
-      if (countMap[num] > 1) {
-        duplicates.push(Number(num))
-      }
-    }
-  
-    return duplicates;
-}
+const findDuplicates = arr => {
+  const countMap = arr.reduce((acc, num) => (acc[num] = (acc[num] || 0) + 1, acc), {});
+  return Object.keys(countMap).filter(num => countMap[num] > 1).map(Number);
+};
 
 module.exports = findDuplicates;

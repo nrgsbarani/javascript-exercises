@@ -11,10 +11,6 @@
  */
 
 // Write your solution here
-sumArray = (num_array) => {
-    return result = num_array.reduce((item , current) => {
-        return item + current
-    }, 0)
-}
+const sumArray = num_array => num_array.reduce((sum, num) => sum + num, 0);
 
 module.exports = sumArray;

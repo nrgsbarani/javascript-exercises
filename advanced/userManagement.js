@@ -14,6 +14,7 @@
  * showUsers() should return [].
  */
 let list = new Set([]);
+
 addUser = (user) => list.has(user) ? false : list.add(user);
 removeUser = (user) => list.has(user) ? list.delete(user) : false;
 showUsers = () => [...list];

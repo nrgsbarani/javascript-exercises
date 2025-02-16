@@ -12,27 +12,32 @@
 
 // Write your solution here
 function numberToWords(num) {
-    if (num === 0) return "zero"
-    const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-    const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
-    
-    let words = ""
-  
-    if (num >= 100) {
-      words += ones[Math.floor(num / 100)] + " hundred"
-      num %= 100
-      if (num > 0) words += " "
-    }
-  
-    if (num >= 20) {
-      words += tens[Math.floor(num / 10)]
-      num %= 10
-      if (num > 0) words += " " + ones[num]
-    } else if (num > 0) {
-      words += ones[num]
-    }
-  
-    return words;
+  if (num === 0) return "zero";
+
+  const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+  const tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+  const thousands = ["", "thousand", "million", "billion", "trillion"];
+
+  function helper(n) {
+      if (n === 0) return "";
+      if (n < 20) return ones[n];
+      if (n < 100) return tens[Math.floor(n / 10)] + (n % 10 ? " " + ones[n % 10] : "");
+      return ones[Math.floor(n / 100)] + " hundred" + (n % 100 ? " " + helper(n % 100) : "");
+  }
+
+  let result = [];
+  let i = 0;
+
+  while (num > 0) {
+      let chunk = num % 1000;
+      if (chunk) {
+          result.unshift(helper(chunk) + (thousands[i] ? " " + thousands[i] : ""));
+      }
+      num = Math.floor(num / 1000);
+      i++;
+  }
+
+  return result.join(" ").trim();
 }
 
 module.exports = numberToWords;

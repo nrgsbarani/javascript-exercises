@@ -11,12 +11,6 @@
  */
 
 // Write your solution here
-factorial = (input) => {
-    let factor = 1
-    for (let i = 1; i <= input; i++) {
-        factor *= i
-    }
-    return factor
-}
+const factorial = n => (n <= 1 ? 1 : n * factorial(n - 1));
 
 module.exports = factorial;
