@@ -13,17 +13,8 @@
 // Write your solution here
 
 const findDuplicates = arr => {
-    const seen = new Set();
-    const duplicates = new Set();
-
-    for (let item of arr) {
-        if (seen.has(item)) {
-            duplicates.add(item);
-        } else {
-            seen.add(item);
-        }
-    }
-    return [...duplicates];
-}
+    const countMap = arr.reduce((acc, num) => (acc[num] = (acc[num] || 0) + 1, acc), {});
+    return Object.keys(countMap).filter(num => countMap[num] > 1).map(Number);
+};
 
 module.exports = findDuplicates;

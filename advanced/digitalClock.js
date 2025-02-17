@@ -25,24 +25,14 @@
 
 
 
-function digitalClock(){
-    let time = '';
-    time = getCurrntTime();
-    document.getElementById('clock').innerHTML = time;
-}
+const digitalClock = () => {
+    const now = new Date();
+    const format = num => String(num).padStart(2, '0');
 
-function getCurrntTime() {
-    let date = new Date();
-    let hour = date.getHours();
-    let minute = date.getMinutes();
-    let second = date.getSeconds();
+    const timeString = `${format(now.getHours())}:${format(now.getMinutes())}:${format(now.getSeconds())}`;
+    document.getElementById('clock').textContent = timeString;
+};
 
-    // Add leading zero if single digit
-    hour = hour < 10 ? '0' + hour : hour;
-    minute = minute < 10 ? '0' + minute : minute;
-    second = second < 10 ? '0' + second : second;
-
-    return `${hour}:${minute}:${second}`;
-}
+setInterval(digitalClock, 1000);
 
 module.exports = digitalClock;

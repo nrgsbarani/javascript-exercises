@@ -11,38 +11,18 @@
  * [ [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3] ].
  */
 
-
-const generateCombinations = (input) => {
+const generateCombinations = arr => {
     const result = [];
-    // Generate combinations recursively
-    generateCombinationRecursively(input, 0, [], result);
-
-    // Sort combinations first by length, then by sum
-    return result.sort((a, b) => a.length - b.length || sumArrays(a) - sumArrays(b) );
-}
-
-
-const generateCombinationRecursively = (input ,  index , currentCombination, result) => {
-    if (index === input.length) {
-        if (currentCombination.length > 0) {
-            result.push([...currentCombination]);
+    
+    const backtrack = (start, current) => {
+        if (current.length) result.push([...current]);
+        for (let i = start; i < arr.length; i++) {
+            backtrack(i + 1, [...current, arr[i]]);
         }
-        return;
-    }
+    };
 
-    // Include Current
-    currentCombination.push(input[index])
-    generateCombinationRecursively(input , index + 1 , currentCombination, result);
-
-    // Exclue Current
-    currentCombination.pop();
-    generateCombinationRecursively(input , index + 1 , currentCombination, result);
-}
-
-function sumArrays(array) {
-    return array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-}
-
-//console.log(generateCombinations([1, 2, 3 , 4]));
+    backtrack(0, []);
+    return result.sort((a, b) => a.length - b.length || a[0] - b[0]);
+};
 
 module.exports = generateCombinations;
