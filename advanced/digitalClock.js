@@ -18,16 +18,13 @@
  * (e.g., `<div id="clock"></div>`) to display the clock.
  */
 
-function digitalClock (){
+function digitalClock() {
+    const clockElement = document.getElementById('clock');
+    const now = new Date();
 
-    let clockElement = document.getElementById('clock')
-    document.body.appendChild(clockElement)
-    
-    const x = new Date()
-    const seconds = x.getSeconds().toString().padStart(2, "0")
-    const minutes  = x.getMinutes().toString().padStart(2, "0")
-    const hours = x.getHours().toString().padStart(2, "0")
-    const time = `${hours}:${minutes}:${seconds}`
-    clockElement.textContent = time
+    clockElement.textContent = now.toLocaleTimeString('en-GB', { hour12: false }); // show time in frame (hh:mm:ss)
 }
+
+setInterval(digitalClock, 1000);
+
 module.exports = digitalClock;
