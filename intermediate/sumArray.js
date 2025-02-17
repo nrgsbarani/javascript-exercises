@@ -12,17 +12,6 @@
 
 // Write your solution here
 
-function sumArray(number){
-
-    var set = number.length;
-    var result = 0
-
-    for (i = 0 ; i < set ; i++){
-        result += number[i]
-    }
-    
-    console.log("Sum is " + result)
-    return result
-}
+const sumArray = num_array => num_array.reduce((sum, num) => sum + num, 0);
 
 module.exports = sumArray;

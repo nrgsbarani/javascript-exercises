@@ -12,12 +12,6 @@
 
 // Write your solution here
 
-function factorial(number){
-    result = 1
-    for ( i = number ; i > 0 ; i-- ){
-        result *= i
-    }
-    return result
-}
+const factorial = n => (n <= 1 ? 1 : n * factorial(n - 1));
 
 module.exports = factorial;

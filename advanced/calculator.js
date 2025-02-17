@@ -14,27 +14,9 @@
  */
 
 // Write your solution here
-function add(x,y){
-    result = x + y ;
-    return result;
-}
-function subtract(x,y){
-    result = x - y;
-    return result;
-}
-function multiply(x,y){
-    result = x * y ;
-    return result;
-}
-function divide(x,y){
-    if (y == 0){
-        return NaN
-    } else if (y != 0) {
-        result = x / y;
-        return result;
-    } else {
-        return ""
-    }
-}
-var result = 0;
+const add = (a, b) => a + b;
+const subtract = (a, b) => a - b;
+const multiply = (a, b) => a * b;
+const divide = (a, b) => (b === 0 ? NaN : a / b);
+
 module.exports = { add, subtract, multiply, divide }

@@ -10,22 +10,6 @@
  */
 
 // Bubble sort
-function sortArray(list_of_numbers){
-    
-    len = list_of_numbers.length;
-    for (i = 0 ; i < len ; i++){
-        for(j = 0; j <= len -1; j++){
-            if (list_of_numbers[j] > list_of_numbers[j+1]){
-                var variable = list_of_numbers[j]
-                list_of_numbers[j] = list_of_numbers[j+1]
-                list_of_numbers[j+1] = variable
-            } else {
-                continue
-            }
-        }
-    }
-    console.log(len)
-    return list_of_numbers
-}
+sortArray = (arr) => arr.sort((a, b) => a - b)
 
 module.exports = sortArray;
