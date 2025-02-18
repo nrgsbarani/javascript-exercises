@@ -11,6 +11,6 @@
  */
 
 // Write your solution here
-celsiusToFahrenheit = (celsius) => { return (celsius * 9/5) + 32 }
+celsiusToFahrenheit = (celsius) => (celsius * 9/5) + 32
 
 module.exports = celsiusToFahrenheit;
