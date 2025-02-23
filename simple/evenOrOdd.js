@@ -11,8 +11,5 @@
  */
 
 // Write your solution here
-isEvenOrOdd = (number) => {
-    return (number % 2 == 0) ? 'Even' : 'Odd';
-}
-
+const isEvenOrOdd = (i) => (i % 2 === 0 ? "Even" : "Odd");
 module.exports = isEvenOrOdd;
