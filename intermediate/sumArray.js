@@ -11,6 +11,5 @@
  */
 
 // Write your solution here
-const sumArray = num_array => num_array.reduce((sum, num) => sum + num, 0);
-
+sumArray = (array) => array.reduce((total,value)=>total += value)
 module.exports = sumArray;

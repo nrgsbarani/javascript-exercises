@@ -11,6 +11,6 @@
  */
 
 // Write your solution here
-const factorial = n => (n <= 1 ? 1 : n * factorial(n - 1));
+const factorial = (n) => n < 0 ? false : n === 0 || n === 1 ? 1 : n * factorial(n - 1)
 
 module.exports = factorial;
